@@ -3,7 +3,7 @@ import * as Color from "../constants/color.js";
 
 var iconDefs = {
   bar: ["bar", "beer", "pub"],
-  cemetery: ["cemetery"],
+  cemetery: "cemetery",
   coffee: ["cafe"],
   hospital: "hospital",
   medical: ["doctors", "clinic"],
@@ -25,9 +25,9 @@ export const poi = {
       [...iconDefs.bar, ...iconDefs.coffee],
       Color.poi.consumer,
       ["hospital", "parking"],
-      Color.poi.outdoor,
-      ["cemetery"],
       Color.poi.infrastructure,
+      ["cemetery"],
+      Color.poi.outdoor,
       Color.poi.infrastructure,
     ],
   },
@@ -39,7 +39,7 @@ export const poi = {
       ["get", "subclass"],
       "hospital",
       15,
-      [...iconDefs.bar, ...iconDefs.coffee],
+      [...iconDefs.bar, ...iconDefs.coffee, iconDefs.cemetery],
       16,
       ["clinic", "doctors", "parking"],
       17,
@@ -97,6 +97,11 @@ export const legendEntries = [
     description: "Doctor's office or clinic",
     layers: [poi.id],
     filter: ["in", ["get", "subclass"], ["literal", iconDefs.medical]],
+  },
+  {
+    description: "Cemetery",
+    layers: [poi.id],
+    filter: ["in", ["get", "subclass"], ["literal", iconDefs.cemetery]],
   },
   {
     description: "Coffee shop",

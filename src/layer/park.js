@@ -56,7 +56,7 @@ export const cemeteryFill = {
   type: "fill",
   filter: ["==", "class", "cemetery"],
   paint: {
-    "fill-color": Color.parkFill,
+    "fill-color": Color.cemeteryFill,
   },
   layout: {
     visibility: "visible",
@@ -78,7 +78,7 @@ export const cemeteryOutline = {
   type: "line",
   filter: ["==", "class", "cemetery"],
   paint: {
-    "line-color": Color.parkOutline,
+    "line-color": Color.cemeteryOutline,
   },
   layout: {
     visibility: "visible",
