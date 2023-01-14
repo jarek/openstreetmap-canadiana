@@ -100,7 +100,5 @@ export const legendEntries = [
     description: "Park",
     layers: [fill.id, outline.id, parkFill.id, parkOutline.id],
   },
-  { description: "Cemetery",
-    layers: [cemeteryFill.id, cemeteryOutline.id],
-  }
+  { description: "Cemetery", layers: [cemeteryFill.id, cemeteryOutline.id] },
 ];
