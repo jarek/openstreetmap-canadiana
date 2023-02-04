@@ -85,6 +85,7 @@ export const poi = {
     "icon-padding": 0,
     "text-padding": 0,
     "icon-allow-overlap": false,
+    "symbol-sort-key": ["get", "rank"],
   },
   source: "openmaptiles",
   "source-layer": "poi",

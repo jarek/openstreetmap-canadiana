@@ -104,7 +104,9 @@ and re-running `npm install`.
 Environment specific settings go in the untracked file `config.js`. Copy from one of
 the templates in the configs/ folder `config.*.js` and rename it `config.js` in
 the src/ root. The variables in this file can then be changed without the risk of
-accidentally comitting to the main repo.
+accidentally committing to the main repo. By default, the repository `config.js` points
+to a development tile server operated by the project maintainers. It is free to use
+for development purposes but service is not guaranteed.
 
 You can create a new copy of the config file by running `npm run config`
 
@@ -250,6 +252,7 @@ The `loadShields` function in js/shield_defs.js contains a definition object for
 
 - **`backgroundImage`** – A reference to the image file used as the shield background, based on the name of the file in icons/. To use a different image depending on the length of the inscribed text, specify an array of images.
 - **`colorLighten`** – Replace the black portions of the specified background image with this color via a "lighten" operation.
+- **`numberingSystem`** – If the shield should express the route number in Roman numerals for stylistic reasons, even though the same route number is normally expressed in (Western) Arabic numerals in other contexts, set this property to `roman` to automatically convert the `ref` to Roman numerals.
 - **`norefImage`** – A reference to an alternative image file used when there is no `ref`. This is appropriate if some routes in the network have a `ref` tag and others do not, and the routes with no ref need a special shield.
 - **`notext`** – By default, a relation missing a `ref` tag will not appear as a shield. Set this property to `true` to display a shield even if it has no `ref`. This is appropriate for one-off shield networks, which are common for toll roads and touristic routes.
 - **`padding`** – An object that specifies the amount of padding on each side of the inscribed text relative to the background image.
@@ -286,6 +289,8 @@ In all cases, banner text should be no more than **4** characters in length.
 
 This style strives to draw representative highway shields wherever they are tagged on road route relations consistently with international norms. This style operates on the expectation that the `network` value on a route relation corresponds to the shield design that will be drawn, and the `ref` value will contain the text which is drawn on the shield. In order to give appropriate mapper feedback, this style will add support for special cases only when the complexity of the route network and shield styling cannot be adequately expressed via `network` and `ref` alone. These special cases should be exceptionally rare and documented in the list below. PRs to add special case code should also add an entry below justifying its inclusion. For all other `network` and `ref` combinations, the style will draw a "generic" shield displaying the `ref` value.
 
+- Shields of individual routes that have unique design elements while sharing an overall theme. Such cases include:
+  - **Great Lakes Circle Tour**. Each shield shows a ribbon encircling another graphic representing one of the Great Lakes.
 - Shields of individual routes having a special color scheme (and possibly additional artwork or text omitted for the purposes of this project), but otherwise matching the shape of shields for the rest of the network. Such cases include:
   - **Arkansas Highway 980**. Highway 980 is a designation applied to various short state highways leading to airports. It has a unique shield based on the state route shield, with a white-on-blue color scheme and additional artwork.
   - **Georgia State Routes 515 and 520**. Highway shields for Georgia State Routes 515 and 520 are colored in blue and green respectively, rather than the usual black, for their entire length. This is done because these roads are part of the Governor's Road Improvement Program (GRIP).
@@ -351,4 +356,4 @@ For consistency, POI icons should use the following color palette:
 | Transportation         | Medium Purple C | <img src="doc-img/pantone_medium_purple_c.svg" height=18 width=50 /> Purple | 78 0 142    | #4e008e     |
 | Knockout               |                 | <img src="doc-img/background.svg" height=18 width=50 /> Lt Grayish Orange   | 249 245 240 | #f9f5f0     |
 
-POIs without a background fill should have a 2px stroke using the "knockout" color above.
+POIs without a background fill should have a 1px border using the "knockout" color above.
