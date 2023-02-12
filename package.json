@@ -27,6 +27,7 @@
     "style": "node scripts/generate_style.js -o dist/style.json"
   },
   "dependencies": {
+    "@americana/maplibre-gl": "file:../maplibre-gl-js",
     "@basemaps/sprites": "^6.28.1",
     "color-namer": "^1.4.0",
     "color-rgba": "^2.4.0",
