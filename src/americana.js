@@ -11,14 +11,14 @@ import * as CustomShields from "./js/custom_shields.js";
 
 import * as languageLabel from "./js/language_label.js";
 
-import * as maplibregl from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
+import * as maplibregl from "@americana/maplibre-gl";
+import "@americana/maplibre-gl/dist/maplibre-gl.css";
 import * as search from "./search.js";
 
 import LegendControl from "./js/legend_control.js";
 import * as LegendConfig from "./js/legend_config.js";
-import SampleControl from "openmapsamples-maplibre/OpenMapSamplesControl.js";
-import { default as OpenMapTilesSamples } from "openmapsamples/samples/OpenMapTiles/index.js";
+//import SampleControl from "openmapsamples-maplibre/OpenMapSamplesControl.js";
+//import { default as OpenMapTilesSamples } from "openmapsamples/samples/OpenMapTiles/index.js";
 
 export function buildStyle() {
   var getUrl = window.location;
@@ -115,11 +115,11 @@ map.addControl(new maplibregl.NavigationControl(), "top-left");
 map.addControl(legendControl, "bottom-left");
 
 // Add our sample data.
-let sampleControl = new SampleControl({ permalinks: true });
-OpenMapTilesSamples.forEach((sample, i) => {
-  sampleControl.addSample(sample);
-});
-map.addControl(sampleControl, "bottom-left");
+// let sampleControl = new SampleControl({ permalinks: true });
+// OpenMapTilesSamples.forEach((sample, i) => {
+//   sampleControl.addSample(sample);
+// });
+// map.addControl(sampleControl, "bottom-left");
 
 map.getCanvas().focus();
 

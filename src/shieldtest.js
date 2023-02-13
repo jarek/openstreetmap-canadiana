@@ -4,7 +4,7 @@ import * as Shield from "./js/shield.js";
 import * as gfx from "./js/screen_gfx.js";
 import * as ShieldDef from "./js/shield_defs.js";
 import * as CustomShields from "./js/custom_shields.js";
-import * as maplibregl from "maplibre-gl";
+import * as maplibregl from "@americana/maplibre-gl";
 
 var getUrl = window.location;
 var baseUrl = getUrl.protocol + "//" + getUrl.host + getUrl.pathname;

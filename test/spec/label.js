@@ -2,7 +2,7 @@
 
 import chai, { expect } from "chai";
 import * as Label from "../../src/constants/label.js";
-import { expression } from "@maplibre/maplibre-gl-style-spec";
+import { expression } from "@americana/maplibre-gl-style-spec";
 
 function localizedTextField(textField, locales) {
   let layers = [

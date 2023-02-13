@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@americana/maplibre-gl": "file:../maplibre-gl-js",
+    "@americana/maplibre-gl-style-spec": "file:../maplibre-gl-js/src/style-spec",
     "@basemaps/sprites": "^6.28.1",
     "color-namer": "^1.4.0",
     "color-rgba": "^2.4.0",
@@ -38,14 +39,10 @@
     "skia-canvas": "^1.0.1"
   },
   "devDependencies": {
-    "@maplibre/maplibre-gl-style-spec": "^17.0.1",
     "chai": "^4.3.7",
     "esbuild": "^0.17.4",
     "events": "^3.3.0",
-    "maplibre-gl": "^2.4.0",
     "mocha": "^10.1.0",
-    "openmapsamples": "github:adamfranco/OpenMapSamples",
-    "openmapsamples-maplibre": "github:adamfranco/OpenMapSamples-MapLibre",
     "prettier": "2.3.2",
     "shx": "^0.3.4",
     "svgo": "^2.8.0",

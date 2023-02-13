@@ -2,7 +2,7 @@
 
 import chai, { expect } from "chai";
 import * as HighwayShieldLayers from "../../src/layer/highway_shield.js";
-import { expression } from "@maplibre/maplibre-gl-style-spec";
+import { expression } from "@americana/maplibre-gl-style-spec";
 
 function expressionContext(properties) {
   return {

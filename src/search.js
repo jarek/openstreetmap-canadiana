@@ -1,6 +1,6 @@
 "use strict";
 
-import * as maplibregl from "maplibre-gl";
+import * as maplibregl from "@americana/maplibre-gl";
 
 import "./search.css";
 

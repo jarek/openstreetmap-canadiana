@@ -7,7 +7,7 @@ import * as ShieldDef from "./shield_defs.js";
 import * as LegendConfig from "./legend_config.js";
 import * as HighwayShieldLayers from "../layer/highway_shield.js";
 
-import * as maplibregl from "maplibre-gl";
+import * as maplibregl from "@americana/maplibre-gl";
 
 const maxPopupWidth = 30; /* em */
 
