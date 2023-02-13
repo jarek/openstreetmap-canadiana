@@ -449,6 +449,7 @@ class Road {
       "line-join": this.brunnel === "bridge" ? "bevel" : "round",
       visibility: "visible",
       "line-sort-key": layerSortKey,
+      "line-group-sort": "road",
     };
     layer.paint = {
       "line-opacity": opacity,

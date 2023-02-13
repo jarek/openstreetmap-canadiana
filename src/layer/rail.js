@@ -423,35 +423,6 @@ class LightRailTramServiceTunnel extends LightRailTramService {
   }
 }
 
-export function getLayerSeparatedBridgeLayers(bridgeLayers) {
-  let layers = [];
-
-  //Render bridge without layer on the lowest bridge layer
-  bridgeLayers.forEach((layer) =>
-    layers.push(
-      Util.filteredClone(layer, ["!", ["has", "layer"]], "_layer_bottom")
-    )
-  );
-
-  //One layer at a time to handle stacked bridges
-  for (let i = 1; i <= 4; i++) {
-    bridgeLayers.forEach((layer) => layers.push(Util.restrictLayer(layer, i)));
-  }
-
-  //If layer is more than 5, just give up and render on a single layer.
-  bridgeLayers.forEach((layer) =>
-    layers.push(
-      Util.filteredClone(
-        layer,
-        [">=", ["coalesce", ["get", "layer"], 0], 5],
-        "_layer_top"
-      )
-    )
-  );
-
-  return layers;
-}
-
 export const railway = new Railway();
 export const railwayBridge = new RailwayBridge();
 export const railwayTunnel = new RailwayTunnel();
@@ -524,10 +495,7 @@ export const legendEntries = [
   },
   {
     description: "Monorail line",
-    layers: [
-      ...getLayerSeparatedBridgeLayers([railwayBridge.fill()]).map((l) => l.id),
-      railway.fill().id,
-    ],
+    layers: [railwayBridge.fill().id, railway.fill().id],
     filter: [
       "all",
       ["==", ["get", "subclass"], "monorail"],

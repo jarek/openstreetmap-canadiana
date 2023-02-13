@@ -29,6 +29,7 @@ export function build(locales) {
   let layers = [];
 
   layers.push(
+    //The labels at the end of the list draw on top of the layers at the beginning.
     lyrBackground.base,
     lyrLanduse.urbanizedArea,
     lyrPark.fill,
@@ -135,12 +136,10 @@ export function build(locales) {
     lyrRail.railway.fill(),
 
     lyrOneway.road,
-    lyrOneway.link
-  );
+    lyrOneway.link,
 
-  layers.push(lyrBuilding.building);
+    lyrBuilding.building,
 
-  var bridgeLayers = [
     lyrRail.bridgeCasing,
 
     lyrRoad.trunkLinkBridge.casing(),
@@ -193,12 +192,7 @@ export function build(locales) {
 
     lyrOneway.bridge,
     lyrOneway.bridgeLink,
-  ];
 
-  layers.push(...lyrRail.getLayerSeparatedBridgeLayers(bridgeLayers));
-
-  layers.push(
-    //The labels at the end of the list draw on top of the layers at the beginning.
     lyrWater.waterwayLabel,
 
     lyrTransportationLabel.bridgeSpacer,
