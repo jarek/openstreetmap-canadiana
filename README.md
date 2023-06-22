@@ -31,7 +31,7 @@ The repository is organized as follows:
 - **src/** - The map style. See [CONTRIBUTING.md](CONTRIBUTING.md).
 - **dev/** - Development tools used for style development. See [Style Developer Tools](dev/README.md)
 - **test/** - Automated unit tests.
-- _Coming soon! Other customized parts of the tech stack._
+- **shieldlib/** - Maplibre [shield rendering library](shieldlib/README.md) ([npm entry](https://www.npmjs.com/package/@americana/maplibre-shield-generator?activeTab=readme)).
 
 Some general guidelines:
 
@@ -46,6 +46,8 @@ Some general guidelines:
 The technology stack for this style can be summarized below:
 
 <img src="doc-img/architecture.drawio.svg" alt="Americana technology stack" />
+
+The dynamic shield generator is included as a [module](shieldlib/README.md) in this repository and also [published to npm](https://www.npmjs.com/package/@americana/maplibre-shield-generator).
 
 ## Data sources
 
@@ -66,3 +68,7 @@ Americana displays custom route shields for routes in all U.S. states and territ
 <img src="doc-img/shield_map_world.svg" width="500" alt="Countries">
 
 We are hoping that it will support more countries; you can [help us](https://github.com/ZeLonewolf/openstreetmap-americana/projects/1)!
+
+## Tile Server
+
+Although the source code in this repository is dedicated to the public domain under a CC0 waiver, it is configured by default to load map tiles from a privately-donated community [tile server](https://tile.ourmap.us). This server is available for use by other hobbyist and community projects with constraints. See the [tile server usage policy](TILE_USAGE.md) for more details. This usage policy describes the allowable usage of the tiles for other projects, separate from this style or the application being developed in this repository.

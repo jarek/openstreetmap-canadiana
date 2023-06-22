@@ -9,7 +9,9 @@ permissions:
   contents: read
   pages: write
   id-token: write
+concurrency: preview-${{ github.ref }}
 jobs:
+  # TODO remove old PRs from s3 bucket automatically
   build-and-deploy:
     runs-on: ubuntu-latest
     environment:
@@ -28,6 +30,7 @@ jobs:
           cp src/configs/config.aws.js src/config.js
           npm run build
           npm run style
+          npm run shields
       - name: Upload 🏗
         uses: actions/upload-pages-artifact@v1
         with:
