@@ -37,11 +37,11 @@ var iconDefs = {
   },
   cemetery: {
     classes: {
-      cemetery: ["cemetery"]
+      cemetery: ["cemetery"],
     },
     sprite: "poi_cemetery",
     color: Color.poi.outdoor,
-    decription: "Cemeter"
+    decription: "Cemeter",
   },
   coffee: {
     classes: {
@@ -213,7 +213,11 @@ export const poi = {
         "tram_stop",
       ],
       15,
-      [...getSubclasses(iconDefs.bar), ...getSubclasses(iconDefs.coffee), ...getSubclasses(iconDefs.cemetery)],
+      [
+        ...getSubclasses(iconDefs.bar),
+        ...getSubclasses(iconDefs.coffee),
+        ...getSubclasses(iconDefs.cemetery),
+      ],
       16,
       ["clinic", "doctors", "parking"],
       17,
