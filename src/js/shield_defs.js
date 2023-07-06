@@ -1710,6 +1710,10 @@ export function loadShields() {
       spriteBlank: "shield_us_in_toll",
     },
   };
+  shields["US:IN:JHMHT"] = {
+    spriteBlank: ["shield_us_in_jhmht"],
+    notext: true,
+  };
 
   // Kansas
   shields["US:KS"] = {
@@ -2673,6 +2677,10 @@ export function loadShields() {
       (shields[`US:OH:${countyAndTownship[0]}:${countyAndTownship[1]}`] =
         banneredShield(shields[`US:OH:${countyAndTownship[0]}`], ["TWP"]))
   );
+  shields["US:OH:JHMHT"] = {
+    spriteBlank: ["shield_us_oh_jhmht"],
+    notext: true,
+  };
 
   // Oklahoma
   shields["US:OK"] = {
