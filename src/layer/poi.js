@@ -39,7 +39,7 @@ var iconDefs = {
     classes: {
       cemetery: ["cemetery"],
     },
-    sprite: "poi_cemetery",
+    sprite: "poi_gravestone",
     color: Color.poi.outdoor,
     decription: "Cemetery",
   },
