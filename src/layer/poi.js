@@ -41,7 +41,7 @@ var iconDefs = {
     },
     sprite: "poi_cemetery",
     color: Color.poi.outdoor,
-    decription: "Cemeter",
+    decription: "Cemetery",
   },
   coffee: {
     classes: {
