@@ -66,7 +66,7 @@ var iconDefs = {
     sprite: "poi_gravestone",
     color: Color.poi.outdoor,
     decription: "Cemetery",
-  },  
+  },
   taxi: {
     classes: {
       office: ["taxi"],
