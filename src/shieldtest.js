@@ -304,6 +304,14 @@ const iterShields = function* () {
     refs: ["QEW"],
   };
   yield {
+    network: "CA:ON:Hamilton:Expressway",
+    names: ["Lincoln M. Alexander Parkway", "Red Hill Valley Parkway"],
+  };
+  yield {
+    network: "CA:ON:Toronto:Expressway",
+    refs: ["DV", "G"],
+  };
+  yield {
     network: "GLCT",
     refs: ["LECT", "LHCT", "LMCT", "LSCT"],
   };
@@ -346,6 +354,10 @@ const iterShields = function* () {
   yield {
     network: "US:NH:Turnpike",
     names: ["Blue Star Turnpike", "Everett Turnpike", "Spaulding Turnpike"],
+  };
+  yield {
+    network: "US:NY:Inner_Loop",
+    names: ["Inner Loop"],
   };
 };
 
