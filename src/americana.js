@@ -37,7 +37,7 @@ export const map = createMap(
     hash: "map",
     antialias: true,
     style: buildStyle(),
-    center: [-94, 40.5],
+    center: [-96, 57],
     zoom: 4,
     attributionControl: false,
   },
